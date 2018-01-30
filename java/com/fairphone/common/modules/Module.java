@@ -20,8 +20,6 @@ import android.annotation.NonNull;
 
 /**
  * A Fairphone 2 module.
- * <p>
- * A plain old Java object that holds information about a module.
  */
 public abstract class Module {
 
@@ -29,16 +27,15 @@ public abstract class Module {
     @NonNull
     private final String mVersionId;
 
-    /* package */ Module(@NonNull String versionId) {
+    Module(@NonNull String versionId) {
         mVersionId = versionId;
     }
 
     /**
-     * @return The installed, non-translatable module version identifier or
-     * <code>null</code>.
+     * @return The installed, non-translatable module version identifier or {@code null}.
      */
     @NonNull
-    public String getVersionId() {
+    public final String getVersionId() {
         return mVersionId;
     }
 
